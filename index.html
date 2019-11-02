@@ -14,6 +14,7 @@
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="css/all.css" rel="stylesheet">
 </head>
 <body id="page-top">
   <!-- Navigation -->
@@ -186,7 +187,62 @@
           </div>
         </div>
       </div>
-    </div>
+      <!-- <div class="container">
+        <div class="row"> -->
+          <!-- <div class="col-sm">
+              <div id="circle1" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+              <div id="circle2" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+              <div id="circle3" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle4" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle5" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle6" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle7" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle8" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle9" class="card-body"></div>
+          </div>
+          <div class="col-sm">
+            <div id="circle10" class="card-body"></div>
+          </div> -->
+          <!-- <div class="row"> -->
+            <!-- <div class="col-sm"> -->
+              <!-- <div id="circle11" class="card-body"> -->
+                <!-- <i class="fab fa-linkedin" style="font-size:70px; color:#00b0f0;"> -->
+                <!-- <i class="fab fa-github" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-atlassian" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-aws" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-bootstrap" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-deskpro" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-git" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-gitkraken" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-slack-hash" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-stack-overflow" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-linux" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-microsoft" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-ubuntu" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-npm" style="font-size:70px; color:#44546a;"> -->
+                <!-- <i class="fab fa-bitbucket" style="font-size:70px; color:#44546a;"> -->
+              <!-- </div> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div>
+      </div>
+    </div> -->
   </section>
   <!-- Portfolio -->
   <section class="content-section" id="portfolio">
@@ -295,6 +351,79 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
-  <script src="js/stylish-progress.js"></script>
+  <!-- <script src="js/stylish-progress.js"></script> -->
+  <script src="js/stylish-progressbar.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script>
+    var brands = [
+      {name: "fab fa-php", value: 0.9},
+      {name: "fab fa-js", value: 0.8},
+      {name: "fab fa-angular", value: 0.5},
+      {name: "fab fa-react", value: 0.4},
+      {name: "fab fa-node", value: 0.65},
+      {name: "fab fa-python", value: 0.75},
+      {name: "fab fa-symfony", value: 0.95},
+      {name: "fab fa-html5", value: 0.90},
+      {name: "fab fa-sass", value: 0.75},
+      {name: "fab fa-css3", value: 0.85}
+    ];
+
+    brands.forEach(function(element, key) {
+      console.log(element['name']);
+      console.log(key);
+
+      var bar3 = new ProgressBar.Circle(document.getElementById('circle'+(key+1)), {
+        color: '#fff',
+        trailColor: '#44546a',
+        strokeWidth: 4,
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+          autoStyleContainer: false,
+        },
+        from: { color: '#aaa', width: 1 },
+        to: { color: '#00b0f0', width: 4 },
+        // Set default step function for all animate calls
+        step: function(state, circle) {
+          circle.path.setAttribute('stroke', state.color);
+          circle.path.setAttribute('stroke-width', state.width);
+
+          var value = Math.round(element['value'] * 100);
+          circle.setText('<i class="'+element['name']+'" style="font-size:70px;"></i><br><span style="font-size:20px;">'+value+'%</span>');
+        }
+      });
+      bar3.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+      bar3.text.style.fontSize = '1rem';
+
+      bar3.animate(element['value']);
+    });
+
+    // var bar3 = new ProgressBar.Circle(circle3, {
+    //   color: '#fff',
+    //   trailColor: '#44546a',
+    //   strokeWidth: 4,
+    //   trailWidth: 1,
+    //   easing: 'easeInOut',
+    //   duration: 1400,
+    //   text: {
+    //     autoStyleContainer: false,
+    //   },
+    //   from: { color: '#aaa', width: 1 },
+    //   to: { color: '#00b0f0', width: 4 },
+    //   // Set default step function for all animate calls
+    //   step: function(state, circle) {
+    //     circle.path.setAttribute('stroke', state.color);
+    //     circle.path.setAttribute('stroke-width', state.width);
+
+    //     var value = Math.round(circle.value() * 100);
+    //     circle.setText('<i class="fab fa-angular" style="font-size:70px;"></i><br><span style="font-size:20px;">'+value+'%</span>');
+    //   }
+    // });
+    // bar3.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    // bar3.text.style.fontSize = '1rem';
+
+    // bar3.animate(0.85);
+  </script>
 </body>
 </html>
