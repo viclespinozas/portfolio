@@ -60,11 +60,15 @@ h6 {
   pointer-events: none;
 }
 
-.margint-top {
+.margin-top-sm {
+  margin-top: 5px;
+}
+
+.margin-top {
   margin-top: 15px;
 }
 
-.margint-top-md {
+.margin-top-md {
   margin-top: 30px;
 }
 
