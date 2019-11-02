@@ -372,77 +372,104 @@ a:hover, a:focus, a:active {
   color: #ecb807 !important;
 }
 
+.margin-top {
+  margin-top: 15px;
+}
+
+.margin-top-md {
+  margin-top: 30px;
+}
+
+.margin-top-lg {
+  margin-top: 60px;
+}
+
 #circle1 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  /*background-color: #44546a;*/
+  background-color: #1D809F;
 }
 #circle2 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle3 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle4 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle5 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle6 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle7 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle8 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle9 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle10 {
   margin: 20px;
   width: 200px;
   height: 200px;
   position: relative;
-  background-color: #44546a;
+  background-color: #1D809F;
 }
 #circle11 {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #1D809F;
+}
+#circle12 {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #1D809F;
+}
+#circle111 {
   /*margin: 10px;*/
   width: 200px;
   height: 200px;
