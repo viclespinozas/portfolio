@@ -365,7 +365,8 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  /*background-color: #1D809F !important;*/
+  background-color: #44546a !important;
 }
 
 .text-primary {
@@ -393,8 +394,8 @@ a:hover, a:focus, a:active {
   width: 200px;
   height: 200px;
   position: relative;
-  /*background-color: #44546a;*/
-  background-color: #1D809F;
+  background-color: #44546a;
+  /*background-color: #1D809F;*/
 }
 #circle2 {
   margin: 20px;
